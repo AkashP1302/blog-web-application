@@ -18,6 +18,10 @@ Comment on Blog Posts: Users can leave comments on blog posts to share their tho
 ## Getting Started
 
 Follow these instructions to get the project up and running on your local machine.
+## Hosting Link
+
+https://github.com/AkashP1302/blog-web-application
+
 
 1. **Clone the repository:**
 
@@ -29,5 +33,6 @@ Follow these instructions to get the project up and running on your local machin
    npm install
 
    npm start
+
 
 

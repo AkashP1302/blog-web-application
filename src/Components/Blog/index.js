@@ -43,12 +43,21 @@ const BlogWebsite = () => {
       <Typography
         variant="h4"
         component="h1"
-        sx={{ display: "flex", color: "#2e2e2e", justifyContent: "center" }}
+        sx={{ mt:5,display: "flex", color: "#2e2e2e", justifyContent: "center" }}
         gutterBottom
       >
         Write New Blog
       </Typography>
       <CreateBlogForm onPublish={handleNewBlogPost} />
+      <Typography
+        variant="h4"
+        component="h1"
+        sx={{ mt:5, display: "flex", color: "#2e2e2e", justifyContent: "center" }}
+        gutterBottom
+      >
+        New Blog
+      </Typography>
+
       <BlogList blogPosts={blogPosts} />
     </div>
   );
