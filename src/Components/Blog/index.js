@@ -3,6 +3,7 @@ import { Typography, Box } from "@mui/material";
 import { CreateBlogForm } from "./CreateBlogForm";
 import { BlogList } from "./BlogList";
 
+//static objects instead of a connection store from a database
 const blogs =[
   {
     title: "The Fascinating World of Animals",
