@@ -8,9 +8,15 @@ import BlogPostDetails from "./Components/Blog/BlogPostDetails";
 function App() {
   return (
     <div style={{ maxHeight: "100vh" }}>
+      {/* Set up the routing configuration */}
       <Routes>
-        <Route path="/" element={<CreateBlog />} />
+        {/* Define a route for the home page */}
+        <Route path="/blog-web-application" element={<CreateBlog />} />
+        
+        {/* Define a route for the "add new blog" page */}
         <Route path="/addNewBlog" element={<CreateBlogForm />} />
+        
+        {/* Define a route for the "blog details" page */}
         <Route path="/blogDetails" element={<BlogPostDetails />} />
       </Routes>
     </div>

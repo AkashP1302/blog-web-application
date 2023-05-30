@@ -4,18 +4,21 @@ import { useLocation } from "react-router-dom";
 import FormButton from "../editors/buttonComponent";
 import TextInput from "../editors/TextInput";
 
-
 const BlogPostDetails = () => {
+  // Access the location object from react-router-dom
   const location = useLocation();
   const { title, author, date, content, blogComments } = location.state;
 
+  // State for the comment input field and comments list
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState(blogComments || []);
 
+  // Event handler for comment input change
   const handleCommentChange = (event) => {
     setComment(event.target.value);
   };
 
+  // Event handler for submitting a comment
   const handleCommentSubmit = () => {
     if (comment.trim() !== "") {
       const newComment = {
@@ -63,9 +66,20 @@ const BlogPostDetails = () => {
             </Typography>
           ) : (
             comments.map((comment) => (
-              <Typography key={comment.id} variant="body2" gutterBottom>
-                {comment.text}
-              </Typography>
+              <>
+                <Typography
+                  sx={{ mb: 2, mt: 2 }}
+                  key={comment.id}
+                  variant="body2"
+                  gutterBottom
+                >
+                  {comment.text}
+                </Typography>
+
+                <Typography
+                  sx={{ border: 1, mt: 1, color: "#2f4f4f" }}
+                ></Typography>
+              </>
             ))
           )}
         </Box>

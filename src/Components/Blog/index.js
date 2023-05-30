@@ -7,7 +7,7 @@ const blogs =[
   {
     title: "The Fascinating World of Animals",
     author: "John",
-    date: "12/12/2022",
+    date: "12/01/2023",
     content: "The Earth is home to a diverse array of fascinating creatures, each with its unique characteristics and adaptations. From the mighty elephants roaming the African savannah to the tiny insects that thrive in our backyards, animals play a crucial role in maintaining the balance of ecosystems. In this blog post, we will explore the captivating world of animals, their remarkable abilities, and the importance of preserving their habitats Animals have evolved incredible adaptations that allow them to survive and thrive in various environments. For example, the chameleon's ability to change its skin color helps it blend into its surroundings, providing camouflage from predators. The giraffe's long neck enables it to reach high tree leaves, while the kangaroo's powerful hind legs allow it to hop efficiently across long distances. These adaptations are a testament to the ingenuity of nature and the remarkable diversity of life on our planet.",
     blogComments:[
       {
@@ -29,35 +29,44 @@ const blogs =[
       }
     ]
   },
+  // You can add more Blog here
 ]
 
 const BlogWebsite = () => {
+  // State to hold the blog posts
   const [blogPosts, setBlogPosts] = useState(blogs);
 
+  // Function to handle adding a new blog post
   const handleNewBlogPost = (newPost) => {
     setBlogPosts((prevPosts) => [...prevPosts, newPost]);
   };
 
   return (
     <div className="blog-website">
+      {/* Heading for writing a new blog */}
       <Typography
         variant="h4"
         component="h1"
-        sx={{ mt:5,display: "flex", color: "#2e2e2e", justifyContent: "center" }}
+        sx={{ mt: 5, display: "flex", color: "#2e2e2e", justifyContent: "center" }}
         gutterBottom
       >
         Write New Blog
       </Typography>
+      
+      {/* Form for creating a new blog post */}
       <CreateBlogForm onPublish={handleNewBlogPost} />
+      
+      {/* Heading for new blog posts */}
       <Typography
         variant="h4"
         component="h1"
-        sx={{ mt:5, display: "flex", color: "#2e2e2e", justifyContent: "center" }}
+        sx={{ mt: 5, display: "flex", color: "#2e2e2e", justifyContent: "center" }}
         gutterBottom
       >
         New Blog
       </Typography>
-
+      
+      {/* Component to display the list of blog posts */}
       <BlogList blogPosts={blogPosts} />
     </div>
   );
