@@ -6,7 +6,7 @@ The Blog Web Application is a platform that allows users to read and write blog 
 Features
 Read Blog Posts: Users can browse through a collection of blog posts on various topics. Each blog post contains a title, author, date, and content.
 
-Write New Blog Posts: Registered users can create and publish their own blog posts. They can enter a title, author name, and write the content using a rich text editor. Once published, the new blog post will be available for others to read and comment on.
+Write New Blog Posts: users can create and publish their own blog posts. They can enter a title, author name, and write the content using a rich text editor. Once published, the new blog post will be available for others to read and comment on.
 
 Comment on Blog Posts: Users can leave comments on blog posts to share their thoughts, ask questions, or engage in discussions. Comments are displayed below each blog post, along with the commenter's name and timestamp.
 

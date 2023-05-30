@@ -19,6 +19,7 @@ export const BlogPost = ({ title, author, date, content, blogComments }) => {
   // Get the navigation function from react-router-dom
   const navigate = useNavigate();
   
+  
   const handleShare = () => {
     // Implement the sharing logic here
     // You can use external libraries or APIs to handle social media sharing
