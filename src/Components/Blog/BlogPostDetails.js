@@ -95,7 +95,7 @@ const BlogPostDetails = () => {
               fontFamily: "Poppins",
             }}
             label="Add a comment"
-            placeholder="Enter content"
+            placeholder="Enter Comments"
             id="content"
             name="content"
             value={comment}
